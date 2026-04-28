@@ -95,6 +95,7 @@ func DecodeOne(data []byte) (interface{}, int, error) {
 func DecodeArrayString(data []byte) ([]string, error) {
 	value, err := Decode(data)
 	if err != nil {
+		return nil, err
 	}
 
 	ts := value.([]interface{})
